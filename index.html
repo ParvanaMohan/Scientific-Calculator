@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101110">
+  <title>Mathly — Scientific Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <a class="brand" href="#">mathly<span>.</span></a>
+      <div class="top-actions">
+        <button id="angleMode" class="mode-button" type="button">DEG</button>
+        <button id="themeToggle" class="icon-button" type="button" aria-label="Toggle theme">☼</button>
+      </div>
+    </header>
+
+    <section class="calculator">
+      <div class="intro">
+        <div>
+          <p class="eyebrow">PRECISION IN EVERY STEP</p>
+          <h1>Scientific calculator</h1>
+          <p class="subtitle">Simple calculations. Powerful possibilities.</p>
+        </div>
+        <span class="status"><span></span> Ready</span>
+      </div>
+
+      <div class="workspace">
+        <section class="calc-panel">
+          <div class="display">
+            <div class="display-top">
+              <span id="modeLabel">SCIENTIFIC MODE · DEG</span>
+              <button id="clear" class="clear-button" type="button">AC</button>
+            </div>
+            <div id="expression" class="expression" aria-label="Expression" aria-live="polite">0</div>
+            <div id="result" class="result" aria-live="polite">0</div>
+            <div id="message" class="message">Ready to calculate</div>
+          </div>
+
+          <div class="keypad" id="keypad">
+            <button class="key utility" data-action="clear">AC</button>
+            <button class="key utility" data-insert="(">(</button>
+            <button class="key utility" data-insert=")">)</button>
+            <button class="key utility" data-insert="%">%</button>
+            <button class="key operator" data-insert="÷">÷</button>
+
+            <button class="key function" data-insert="sin(">sin</button>
+            <button class="key function" data-insert="cos(">cos</button>
+            <button class="key function" data-insert="tan(">tan</button>
+            <button class="key function" data-insert="log(">log</button>
+            <button class="key operator" data-insert="×">×</button>
+
+            <button class="key function" data-insert="asin(">sin⁻¹</button>
+            <button class="key function" data-insert="acos(">cos⁻¹</button>
+            <button class="key function" data-insert="atan(">tan⁻¹</button>
+            <button class="key function" data-insert="ln(">ln</button>
+            <button class="key operator" data-insert="−">−</button>
+
+            <button class="key function" data-insert="√(">√</button>
+            <button class="key function" data-insert="^2">x²</button>
+            <button class="key function" data-insert="^">xʸ</button>
+            <button class="key function" data-insert="!">x!</button>
+            <button class="key operator" data-insert="+">+</button>
+
+            <button class="key function" data-insert="π">π</button>
+            <button class="key function" data-insert="e">e</button>
+            <button class="key function" data-insert="sqrt(">√x</button>
+            <button class="key function" data-insert="cbrt(">∛x</button>
+            <button class="key function" data-insert="1÷">1/x</button>
+
+            <button class="key function" data-insert="10^(">10ˣ</button>
+            <button class="key function" data-insert="exp(">eˣ</button>
+            <button class="key function" data-insert="abs(">|x|</button>
+            <button class="key function" data-insert="deg(">→ DEG</button>
+            <button class="key function" data-insert="rad(">→ RAD</button>
+
+            <button class="key number" data-insert="7">7</button>
+            <button class="key number" data-insert="8">8</button>
+            <button class="key number" data-insert="9">9</button>
+            <button class="key utility" data-action="backspace">⌫</button>
+            <button class="key utility" data-action="sign">+/−</button>
+
+            <button class="key number" data-insert="4">4</button>
+            <button class="key number" data-insert="5">5</button>
+            <button class="key number" data-insert="6">6</button>
+            <button class="key number" data-insert="1">1</button>
+            <button class="key number" data-insert="2">2</button>
+
+            <button class="key number" data-insert="3">3</button>
+            <button class="key number" data-insert="0">0</button>
+            <button class="key number" data-insert=".">.</button>
+            <button class="key utility" data-action="ans">Ans</button>
+            <button class="key equals" data-action="equals">=</button>
+          </div>
+
+          <p class="keyboard-hint">Keyboard supported · Enter to calculate · Esc to clear</p>
+        </section>
+
+        <aside class="history-panel">
+          <div class="history-heading">
+            <div>
+              <p class="eyebrow">YOUR WORK</p>
+              <h2>History</h2>
+            </div>
+            <button id="clearHistory" class="text-button" type="button">Clear</button>
+          </div>
+          <div id="history" class="history-list">
+            <div class="empty-history">
+              <span>↗</span>
+              <p>Your calculations will appear here.</p>
+            </div>
+          </div>
+          <div class="history-footer">
+            <span class="history-dot"></span>
+            Calculations stay in this session
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <footer>
+      <span>MATHLY © 2026</span>
+      <span>Built for curious minds.</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
